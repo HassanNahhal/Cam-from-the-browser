@@ -1,4 +1,4 @@
-var fileChooser = document.getElementById('form');
+var fileChooser = document.getElementsByTagName('camera');
 var content = document.getElementById('content');
 
 if (typeof window.FileReader === 'undefined') {
