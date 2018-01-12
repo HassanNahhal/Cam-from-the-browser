@@ -18,14 +18,15 @@ fileChooser.onchange = function (e) {
 
     reader.onload = function (event) {
         var img = new Image();
-
+        /*
         // files from the Gallery need the URL adjusted
         if (event.target.result && event.target.result.match(/^data:base64/)) {
             img.src = event.target.result.replace(/^data:base64/, 'data:image/jpeg;base64');
         } else {
             img.src = event.target.result;
         }
-
+        */
+        
         // Guess photo orientation based on device orientation, works when taking picture, fails when loading from gallery
         if (navigator.userAgent.match(/mobile/i) && window.orientation === 0) {
             img.height = 250;
@@ -42,4 +43,13 @@ fileChooser.onchange = function (e) {
     reader.readAsDataURL(file);
 
     return false;
+}
+
+saveImage= function (base64, fileName) {
+
+    var link = document.createElement("a");
+
+    link.setAttribute("href", base64);
+    link.setAttribute("download", fileName);
+    link.click();
 }
