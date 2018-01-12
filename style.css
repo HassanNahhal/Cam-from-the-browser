@@ -13,11 +13,12 @@ img {
     background: white;
 }
 
+/*
 .rotate {
 	transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
 }
-
+*/
 form {
     padding-top: 60px;
 }

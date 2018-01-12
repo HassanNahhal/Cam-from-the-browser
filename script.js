@@ -31,6 +31,7 @@ fileChooser.onchange = function (e) {
         if (navigator.userAgent.match(/mobile/i) && window.orientation === 0) {
             img.height = 250;
             img.className = 'rotate';
+            img.id= "imageId";
         } else {
             img.width = 400;
         }
@@ -45,10 +46,14 @@ fileChooser.onchange = function (e) {
     return false;
 }
 
+function goBack() {
+    window.history.back();
+}
+
 saveImage = function (fileName) {
-    var base64 = getBase64Image(document.getElementById("content")).onload();
-    link.setAttribute("href", imgData);
-    link.setAttribute("download", fileName); link.click();
+    var base64 = getBase64Image(content.getElementsByTagName("img")[0]);
+    //link.setAttribute("href", imgData);
+   // link.setAttribute("download", fileName); link.click();
 }
 
 function getBase64Image(img) {
