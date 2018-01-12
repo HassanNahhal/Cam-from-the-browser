@@ -36,6 +36,7 @@ fileChooser.onchange = function (e) {
 
         content.innerHTML = '';
         content.appendChild(img);
+        alert(img);
     };
     
     reader.readAsDataURL(file);
