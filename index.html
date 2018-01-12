@@ -2,20 +2,19 @@
 <html lang="en">
 
 <head>
-	<script src="script.js" type="text/javascript"></script>
-</head>
-<meta charset=utf-8>
-<meta name="viewport" content="width=320">
-<link rel="stylesheet" href="style.css">
+	<meta charset=utf-8>
+	<meta name="viewport" content="width=320">
+	<link rel="stylesheet" href="style.css">
 
-<body>
+	<body>
+		<div id="content">
+		</div>
+		<form>
+			<input type="file" accept="image/*;capture=camera" />
+			<button type="button" onclick="saveImage('Image')">Download</button>
+		</form>
 
-	<div id="content"></div>
-		<input id="camera" type="file" accept="image/*;capture=camera" />
-
-		<button type="button" onclick="saveImage()">Download</button>
-
-
-</body>
+		<script src="script.js" type="text/javascript"></script>
+	</body>
 
 </html>
